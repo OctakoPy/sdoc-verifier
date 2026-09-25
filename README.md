@@ -2,6 +2,10 @@
 
 ![SDOC Verifier project cover](docs/assets/cover-image.png)
 
+## Demo
+
+Watch the [demo video](https://youtu.be/-rfNbwxyxYc) for a visual walkthrough of the local read-only decision flow.
+
 SDOC Verifier is a deterministic-first, auditable pipeline for checking a
 Shipping Instruction (SI) against a draft Bill of Lading (BL). It classifies
 shipping-operations email, parses TXT, XLSX, DOCX, and PDF attachments,
@@ -39,8 +43,6 @@ npm --prefix ui ci
 
 Open the local dashboard at `http://localhost:5173`. The launcher starts the
 API on `http://127.0.0.1:8000` and stops both processes with `Ctrl+C`.
-
-For a visual walkthrough, watch the [demo video](https://youtu.be/-rfNbwxyxYc).
 
 The demo is read-only. It does not send email, write output artifacts, persist
 resolution state, access cloud storage, or require Google Cloud credentials.
