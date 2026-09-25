@@ -1,0 +1,8 @@
+运输指示
+发货人: Northstar Paper Co.
+收货人: Harbor Retail Ltd
+通知人: Harbor Retail Ltd
+装货港: Port of Aster (AST)
+卸货港: Port of Birch (BIR)
+集装箱数量: 2 x 40'HC
+毛重(千克): 18,400 KG

@@ -1,0 +1,8 @@
+SHIPPING INSTRUCTION
+Shipper: Northstar Paper Co.
+Consignee: Harbor Retail Ltd
+Notify Party: Harbor Retail Ltd
+Port of Loading: Port of Aster (AST)
+Port of Discharge: Port of Birch (BIR)
+No. of Containers: 1 x 20'GP
+Gross Weight: 9,000 KG

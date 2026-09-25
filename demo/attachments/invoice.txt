@@ -1,0 +1,6 @@
+COMMERCIAL INVOICE
+Invoice Number: INV-0042
+Customer: Harbor Retail Ltd
+Description: Copy paper
+Quantity: 100
+Total: 4200 USD
