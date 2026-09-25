@@ -1,0 +1,79 @@
+[project]
+name = "sdoc-verifier"
+version = "0.1.0"
+description = "Deterministic-first shipping document verification for auditable local review."
+authors = [
+    { name = "OctakoPy" },
+    { name = "Felicia" },
+]
+license = "BSD-3-Clause"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115,<1.0",
+    "openpyxl>=3.1,<4.0",
+    "pymupdf>=1.24,<2.0",
+    "python-docx>=1.1,<2.0",
+    "uvicorn>=0.30,<1.0",
+]
+
+[project.optional-dependencies]
+gemini = [
+    "google-genai>=1.0,<2.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28,<1.0",
+    "pre-commit>=4.0,<5.0",
+    "pyright>=1.1.390,<2.0",
+    "pytest>=8.3,<9.0",
+    "pytest-cov>=6.0,<7.0",
+    "ruff>=0.9,<1.0",
+]
+docs = [
+    "mkdocs>=1.6,<2.0",
+    "mkdocs-material>=9.5,<10.0",
+    "mkdocstrings[python]>=0.27,<1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "--doctest-modules --doctest-glob=*.py --strict-markers"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["src/sdoc_verifier"]
+branch = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+extend-exclude = [
+    "graphify-out",
+    "ui/node_modules",
+    "ui/dist",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/build_demo_fixtures.py" = ["E501"]
+
+[tool.pyright]
+include = ["src", "api", "scripts"]
+exclude = [".venv", "graphify-out", "ui"]
+pythonVersion = "3.11"
+typeCheckingMode = "basic"
+
+[build-system]
+requires = ["uv-build>=0.8,<1.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "sdoc_verifier"
+module-root = "src"
