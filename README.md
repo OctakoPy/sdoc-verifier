@@ -1,5 +1,7 @@
 # SDOC Verifier
 
+![SDOC Verifier project cover](docs/assets/cover-image.png)
+
 SDOC Verifier is a deterministic-first, auditable pipeline for checking a
 Shipping Instruction (SI) against a draft Bill of Lading (BL). It classifies
 shipping-operations email, parses TXT, XLSX, DOCX, and PDF attachments,
