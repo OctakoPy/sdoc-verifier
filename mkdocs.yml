@@ -1,0 +1,19 @@
+site_name: SDOC Verifier
+site_description: Deterministic-first, auditable shipping-document verification
+docs_dir: docs
+strict: true
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Validation: validation.md
+  - Limitations: limitations.md
+  - Security: security.md
+  - Demo: demo.md
+  - Data provenance: data-provenance.md
+  - Attribution: attribution.md
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
